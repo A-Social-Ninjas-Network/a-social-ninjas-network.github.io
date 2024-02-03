@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>packages Archives - The GitHub Blog</title>
+	<atom:link href="https://github.blog/changelog/label/packages/feed/" rel="self" type="application/rss+xml" />
+	<link>https://github.blog/changelog/label/packages/</link>
+	<description>Updates, ideas, and inspiration from GitHub to help developers build and design software.</description>
+	<lastBuildDate>Tue, 26 Sep 2023 20:45:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.4.3</generator>
+
+<image>
+	<url>https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32</url>
+	<title>packages Archives - The GitHub Blog</title>
+	<link>https://github.blog/changelog/label/packages/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">153214340</site>	<item>
+		<title>Changes to token permission on packages</title>
+		<link>https://github.blog/changelog/2023-09-26-changes-to-token-permission-on-packages</link>
+		
+		<dc:creator><![CDATA[Kevin Duck]]></dc:creator>
+		<pubDate>Tue, 26 Sep 2023 20:45:12 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2023-09-26-changes-to-token-permission-on-packages</guid>
+
+					<description><![CDATA[<p>Changes to token permission on packages</p>
+<p>The post <a href="https://github.blog/changelog/2023-09-26-changes-to-token-permission-on-packages">Changes to token permission on packages</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Announcing changes to permissions for packages.</p>
+<p>We are restricting the <a href="https://docs.github.com/rest/git/refs#create-a-reference"><code>refs</code> REST API endpoint</a> from accepting POSTs from users and apps that only have the <a href="https://docs.github.com/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility">permission to read and write packages.</a> Previously, this endpoint accepted updates to both <code>tags</code> and <code>branches.</code></p>
+<p>If that ability is critical to your development flows you will now be required to add explicit contents permissions to create refs.</p>
+<ul>
+<li><a href="https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">Users will need to add the <code>public_repo</code> scope to their PAT token.</a><br />
+<img decoding="async" src="https://github.com/github/release-assets/assets/7575792/2fc21313-dc9b-4ac6-a34e-d97335b8766b" alt="Screenshot showing User PAT for selecting correct scope">
+</li>
+<li><a href="https://docs.github.com/rest/overview/permissions-required-for-github-apps#repository-permissions-for-contents">Apps will need to use the <code>read and write</code> contents permission.</a><br />
+<img decoding="async" src="https://github.com/github/release-assets/assets/7575792/705cbda4-d96e-4bf2-aafc-ef18c3c295da" alt="Screenshot showing app permissions needed">
+</li>
+<li><a href="https://docs.github.com/actions/security-guides/automatic-token-authentication">GitHub Actions customers will need to add <code>contents:write</code> to their workflow YAML.</a>
+<pre><code>permissions:
+     contents: write</code></pre>
+</li>
+</ul>
+<p>A small cohort of customers relying on this flow have been notified of these changes and will have additional time to remediate.</p>
+<p>We appreciate your feedback in GitHub&#039;s <a href="https://github.com/orgs/community/discussions/categories/repositories">public feedback discussions</a>.</p>
+<p>The post <a href="https://github.blog/changelog/2023-09-26-changes-to-token-permission-on-packages">Changes to token permission on packages</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">74328</post-id>	</item>
+		<item>
+		<title>Packages&#058; Fine-grained permissions and organization-level publishing are now available for the GitHub Packages RubyGems registry</title>
+		<link>https://github.blog/changelog/2023-01-10-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-rubygems-registry</link>
+		
+		<dc:creator><![CDATA[Kevin Duck]]></dc:creator>
+		<pubDate>Tue, 10 Jan 2023 19:50:28 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2023-01-10-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-rubygems-registry</guid>
+
+					<description><![CDATA[<p>Packages&#058; Fine-grained permissions and organization-level publishing are now available for the GitHub Packages RubyGems registry</p>
+<p>The post <a href="https://github.blog/changelog/2023-01-10-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-rubygems-registry">Packages&#058; Fine-grained permissions and organization-level publishing are now available for the GitHub Packages RubyGems registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>The GitHub Packages RubyGems registry now runs on a new architecture, unlocking great new capabilities:</p>
+<h2 id="publishing-packages-at-organization-level-with-github-packages" id="publishing-packages-at-organization-level-with-github-packages" >Publishing packages at organization level with GitHub Packages<a href="#publishing-packages-at-organization-level-with-github-packages" class="heading-link pl-2 text-italic text-bold" aria-label="Publishing packages at organization level with GitHub Packages"></a></h2>
+<p>Previously, RubyGems packages published to GitHub Packages were closely coupled to their repositories. Now packages can be published at an organization level. They can still be linked to a repository at any time, if needed.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package">connecting a repository to a package</a>.</p>
+<h2 id="fine-grained-permissions-for-rubygems-packages-published-to-github-packages" id="fine-grained-permissions-for-rubygems-packages-published-to-github-packages" >Fine grained permissions for RubyGems packages published to GitHub Packages<a href="#fine-grained-permissions-for-rubygems-packages-published-to-github-packages" class="heading-link pl-2 text-italic text-bold" aria-label="Fine grained permissions for RubyGems packages published to GitHub Packages"></a></h2>
+<p>You can now configure Actions and Codespaces repository access on the package&#039;s settings page, or invite other users to access the package. Additionally, RubyGems packages published to GitHub Packages can still be configured to automatically inherit all permissions from a linked repository.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility">configuring a package&#039;s access control</a>.</p>
+<h2 id="internal-visibility" id="internal-visibility" >Internal visibility<a href="#internal-visibility" class="heading-link pl-2 text-italic text-bold" aria-label="Internal visibility"></a></h2>
+<p>In addition to public and private, a package&#039;s visibility can now also be set to internal. It is then visible for all members of the GitHub organization.</p>
+<hr>
+<p>These new features are now available to all users on github.com.</p>
+<p>Read more about <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-rubygems-registry">working with the GitHub RubyGems registry</a></p>
+<p>We appreciate your feedback on these new changes in GitHub&#039;s <a href="https://github.com/community/community/discussions/categories/actions-and-packages">public community discussions</a>!</p>
+<p>The post <a href="https://github.blog/changelog/2023-01-10-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-rubygems-registry">Packages&#058; Fine-grained permissions and organization-level publishing are now available for the GitHub Packages RubyGems registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">69408</post-id>	</item>
+		<item>
+		<title>Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages NuGet registry</title>
+		<link>https://github.blog/changelog/2022-12-09-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-nuget-registry</link>
+		
+		<dc:creator><![CDATA[Kevin Duck]]></dc:creator>
+		<pubDate>Fri, 09 Dec 2022 16:45:42 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2022-12-09-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-nuget-registry</guid>
+
+					<description><![CDATA[<p>Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages NuGet registry</p>
+<p>The post <a href="https://github.blog/changelog/2022-12-09-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-nuget-registry">Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages NuGet registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>The GitHub Packages NuGet registry now runs on a new architecture, unlocking great new capabilities:</p>
+<h2 id="publishing-packages-at-organization-level-with-github-packages" id="publishing-packages-at-organization-level-with-github-packages" >Publishing packages at organization level with GitHub Packages<a href="#publishing-packages-at-organization-level-with-github-packages" class="heading-link pl-2 text-italic text-bold" aria-label="Publishing packages at organization level with GitHub Packages"></a></h2>
+<p>Previously, NuGet packages published to GitHub Packages were closely coupled to their repositories. Now packages can be published at an organization level. They can still be linked to a repository at any time, if needed.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package">connecting a repository to a package</a>.</p>
+<h2 id="fine-grained-permissions-for-nuget-packages-published-to-github-packages" id="fine-grained-permissions-for-nuget-packages-published-to-github-packages" >Fine grained permissions for NuGet packages published to GitHub Packages<a href="#fine-grained-permissions-for-nuget-packages-published-to-github-packages" class="heading-link pl-2 text-italic text-bold" aria-label="Fine grained permissions for NuGet packages published to GitHub Packages"></a></h2>
+<p>You can now configure Actions and Codespaces repository access on the package&#039;s settings page, or invite other users to access the package. Additionally, NuGet packages published to GitHub Packages can still be configured to automatically inherit all permissions from a linked repository.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility">configuring a package&#039;s access control</a>.</p>
+<h2 id="internal-visibility" id="internal-visibility" >Internal visibility<a href="#internal-visibility" class="heading-link pl-2 text-italic text-bold" aria-label="Internal visibility"></a></h2>
+<p>In addition to public and private, a package&#039;s visibility can now also be set to internal. It is then visible for all members of the GitHub organization.</p>
+<hr>
+<p>These new features are now available to all users on github.com.</p>
+<p>Read more about <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry">working with the GitHub NuGet registry</a></p>
+<p>We appreciate your feedback on these new changes in GitHub&#039;s <a href="https://github.com/community/community/discussions/categories/actions-and-packages">public community discussions</a>!</p>
+<p>The post <a href="https://github.blog/changelog/2022-12-09-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-nuget-registry">Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages NuGet registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">69078</post-id>	</item>
+		<item>
+		<title>Packages: Consolidated owner and admin role</title>
+		<link>https://github.blog/changelog/2022-10-10-packages-consolidated-owner-and-admin-role</link>
+		
+		<dc:creator><![CDATA[Kevin Duck]]></dc:creator>
+		<pubDate>Mon, 10 Oct 2022 12:43:46 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2022-10-10-packages-consolidated-owner-and-admin-role</guid>
+
+					<description><![CDATA[<p>Packages: Consolidated owner and admin role</p>
+<p>The post <a href="https://github.blog/changelog/2022-10-10-packages-consolidated-owner-and-admin-role">Packages: Consolidated owner and admin role</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Previously, the original publisher of a package in GitHub Packages had the <em>owner</em> attribute, which granted them <em>admin</em> privileges for the package. The current package admin role has the exact same privileges.</p>
+<p>As of today the two roles with identical privileges are being merged and the admin role can be used as the ultimate authority. By default, both the original publisher and the organization owner will have admin privileges on that package.</p>
+<p>In addition to uploading and downloading a package, admins can manage a package, read and write package metadata and grant package permissions.</p>
+<p>As part of this change, the owner badge is no longer shown next to the package publisher&#039;s username.</p>
+<p><a href="https://docs.github.com/en/packages/learn-github-packages/about-permissions-for-github-packages#visibility-and-access-permissions-for-container-images">Learn more about permissions for packages</a></p>
+<p>The post <a href="https://github.blog/changelog/2022-10-10-packages-consolidated-owner-and-admin-role">Packages: Consolidated owner and admin role</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">67700</post-id>	</item>
+		<item>
+		<title>Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages npm registry</title>
+		<link>https://github.blog/changelog/2022-08-31-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-npm-registry</link>
+		
+		<dc:creator><![CDATA[Kevin Duck]]></dc:creator>
+		<pubDate>Wed, 31 Aug 2022 14:51:10 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2022-08-31-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-npm-registry</guid>
+
+					<description><![CDATA[<p>Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages npm registry</p>
+<p>The post <a href="https://github.blog/changelog/2022-08-31-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-npm-registry">Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages npm registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>The GitHub Packages npm registry now runs on a new architecture, unlocking great new capabilities:</p>
+<h2 id="publishing-packages-at-organization-level-with-github-packages" id="publishing-packages-at-organization-level-with-github-packages" >Publishing packages at organization level with GitHub Packages<a href="#publishing-packages-at-organization-level-with-github-packages" class="heading-link pl-2 text-italic text-bold" aria-label="Publishing packages at organization level with GitHub Packages"></a></h2>
+<p>Previously, npm packages published to GitHub packages were closely coupled to their repositories. Now packages can be published at an organization level. They can still be linked to a repository at any time, if needed.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package">connecting a repository to a package</a>.</p>
+<h2 id="fine-grained-permissions-for-npm-packages-published-to-github-packages" id="fine-grained-permissions-for-npm-packages-published-to-github-packages" >Fine grained permissions for npm packages published to GitHub Packages<a href="#fine-grained-permissions-for-npm-packages-published-to-github-packages" class="heading-link pl-2 text-italic text-bold" aria-label="Fine grained permissions for npm packages published to GitHub Packages"></a></h2>
+<p>You can now configure Actions and Codespaces repository access on the package&#8217;s settings page, or invite other users to access the package. Additionally, npm packages published to GitHub packages can still be configured to automatically inherit all permissions from a linked repositories.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility">configuring a package&#8217;s access control</a>.</p>
+<h2 id="internal-visibility" id="internal-visibility" >Internal visibility<a href="#internal-visibility" class="heading-link pl-2 text-italic text-bold" aria-label="Internal visibility"></a></h2>
+<p>In addition to public and private, a package&#8217;s visibility can now also be set to internal. It is then visible for all members of the GitHub organization.</p>
+<hr />
+<p>These new features are now available to all users on github.com.</p>
+<p>Read more about <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry">working with the GitHub npm registry</a></p>
+<p>We appreciate your feedback on these new changes in GitHub&#8217;s <a href="https://github.com/community/community/discussions/categories/actions-and-packages">public community discussions</a>!</p>
+<p>The post <a href="https://github.blog/changelog/2022-08-31-packages-fine-grained-permissions-and-organization-level-publishing-are-now-available-for-the-github-packages-npm-registry">Packages: Fine-grained permissions and organization-level publishing are now available for the GitHub Packages npm registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">66782</post-id>	</item>
+		<item>
+		<title>Deprecation Notice&#058; GraphQL for Packages</title>
+		<link>https://github.blog/changelog/2022-08-18-deprecation-notice-graphql-for-packages</link>
+		
+		<dc:creator><![CDATA[Kevin Duck]]></dc:creator>
+		<pubDate>Thu, 18 Aug 2022 08:16:34 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2022-08-18-deprecation-notice-graphql-for-packages</guid>
+
+					<description><![CDATA[<p>Deprecation Notice&#058; GraphQL for Packages</p>
+<p>The post <a href="https://github.blog/changelog/2022-08-18-deprecation-notice-graphql-for-packages">Deprecation Notice&#058; GraphQL for Packages</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>GitHub Packages is being re-platformed, unlocking great capabilities such as fine-grained permissions, org-level publishing and increased performance.</p>
+<p>Package registries on the new GitHub Packages architecture, including container registry and npm packages, no longer expose data through the <a href="https://docs.github.com/en/graphql">GraphQL API</a>. We recommend using the <a href="https://docs.github.com/en/rest/packages">REST API</a> instead.</p>
+<p>In the coming months we will be migrating our other GitHub Package registries to this new architecture deprecating the GraphQL API for those registries as well.</p>
+<p>If you have any questions, please <a href="https://support.github.com/contact">contact GitHub Support</a>.</p>
+<p>The post <a href="https://github.blog/changelog/2022-08-18-deprecation-notice-graphql-for-packages">Deprecation Notice&#058; GraphQL for Packages</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">66552</post-id>	</item>
+		<item>
+		<title>GitHub Packages Container registry is generally available!</title>
+		<link>https://github.blog/changelog/2021-06-21-github-packages-container-registry-is-generally-available</link>
+		
+		<dc:creator><![CDATA[phanatic]]></dc:creator>
+		<pubDate>Mon, 21 Jun 2021 19:05:37 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2021-06-21-github-packages-container-registry-is-generally-available</guid>
+
+					<description><![CDATA[<p>GitHub Packages Container registry is generally available!</p>
+<p>The post <a href="https://github.blog/changelog/2021-06-21-github-packages-container-registry-is-generally-available">GitHub Packages Container registry is generally available!</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>GitHub Packages Container registry, <a href="https://ghcr.io">ghcr.io</a>, is now generally available! Container registry provides the best developer experience for publishing, managing, and consuming containers on GitHub. For more information, check out the <a href="https://github.blog/2021-06-21-github-packages-container-registry-generally-available/">Container registry general availability blog post</a>.</p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">GitHub Container registry</a></p>
+<p><a href="https://github.community/c/code-to-cloud/github-packages/43">For questions, visit the GitHub Packages community</a></p>
+<p><a href="https://github.com/github/roadmap/projects/1?card_filter_query=label%3Apackages">To see what&#039;s next for Packages, visit our public roadmap</a></p>
+<p>The post <a href="https://github.blog/changelog/2021-06-21-github-packages-container-registry-is-generally-available">GitHub Packages Container registry is generally available!</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">58760</post-id>	</item>
+		<item>
+		<title>Packages&#058; ghcr.io maintenance mode on 2021-06-05</title>
+		<link>https://github.blog/changelog/2021-06-02-packages-ghcr-io-maintenance-mode-on-2021-06-05</link>
+		
+		<dc:creator><![CDATA[phanatic]]></dc:creator>
+		<pubDate>Wed, 02 Jun 2021 20:26:25 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2021-06-02-packages-ghcr-io-maintenance-mode-on-2021-06-05</guid>
+
+					<description><![CDATA[<p>Packages&#058; ghcr.io maintenance mode on 2021-06-05</p>
+<p>The post <a href="https://github.blog/changelog/2021-06-02-packages-ghcr-io-maintenance-mode-on-2021-06-05">Packages&#058; ghcr.io maintenance mode on 2021-06-05</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>On June 5th, 2021 the GitHub Container Registry, <a href="https://ghcr.io">ghcr.io</a>, will be put into maintenance mode. The maintenance window will occur from 16:00 &#8211; 17:30 UTC. During this short time pushes to the service will be blocked, however pulls or downloads will remain available. For more detailed status information during maintenance, please refer to <a href="https://githubstatus.com">https://githubstatus.com</a></p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">GitHub Container Registry</a></p>
+<p><a href="https://github.community/c/code-to-cloud/github-packages/43">For questions, visit the GitHub Packages community</a></p>
+<p><a href="https://github.com/github/roadmap/projects/1?card_filter_query=label%3Apackages">To see what&#039;s next for Packages, visit our public roadmap</a></p>
+<p>The post <a href="https://github.blog/changelog/2021-06-02-packages-ghcr-io-maintenance-mode-on-2021-06-05">Packages&#058; ghcr.io maintenance mode on 2021-06-05</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">58525</post-id>	</item>
+		<item>
+		<title>Packages: Container registry now supports GITHUB_TOKEN</title>
+		<link>https://github.blog/changelog/2021-03-24-packages-container-registry-now-supports-github_token</link>
+		
+		<dc:creator><![CDATA[phanatic]]></dc:creator>
+		<pubDate>Wed, 24 Mar 2021 17:56:45 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2021-03-24-packages-container-registry-now-supports-github_token</guid>
+
+					<description><![CDATA[<p>Packages&#058; Container registry now supports GITHUB_TOKEN</p>
+<p>The post <a href="https://github.blog/changelog/2021-03-24-packages-container-registry-now-supports-github_token">Packages: Container registry now supports GITHUB_TOKEN</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>You can now use GITHUB_TOKEN to authenticate with the Packages Container registry in your Actions workflows.  Say goodbye to all those PATs (delete them from your profile too!), and say hello to using the GITHUB_TOKEN in your workflows to read, create, update, and delete containers. </p>
+<pre><code class="language-diff">      - name: Login to Packages Container registry
+        uses: docker/login-action@v1 
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+-          password: ${{ secrets.PAT }}
++          password: ${{ secrets.GITHUB_TOKEN }}</code></pre>
+<p>Write and read access of Actions to containers can be managed in the container settings.</p>
+<p><img decoding="async" src="https://i0.wp.com/user-images.githubusercontent.com/2134/111272974-7ebea280-85f0-11eb-9605-45cbb80518ce.gif?ssl=1" alt="manage actions access animation" data-recalc-dims="1"></p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/guides/using-github-packages-with-github-actions#authenticating-to-github-container-registry<" rel="noopener" target="_blank">authenticating to Container registry with GitHub Actions</a></p>
+<p><a href="https://github.community/c/code-to-cloud/github-packages/43">For questions, visit the GitHub Packages community</a></p>
+<p><a href="https://github.com/github/roadmap/projects/1?card_filter_query=label%3Apackages">To see what&#039;s next for Packages, visit our public roadmap</a></p>
+<p>The post <a href="https://github.blog/changelog/2021-03-24-packages-container-registry-now-supports-github_token">Packages: Container registry now supports GITHUB_TOKEN</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">56993</post-id>	</item>
+		<item>
+		<title>Packages&#058; internal visibility now available for Container registry</title>
+		<link>https://github.blog/changelog/2021-03-24-packages-internal-visibility-now-available-for-container-registry</link>
+		
+		<dc:creator><![CDATA[phanatic]]></dc:creator>
+		<pubDate>Wed, 24 Mar 2021 17:55:30 +0000</pubDate>
+				<guid isPermaLink="false">https://github.blog/changelog/2021-03-24-packages-internal-visibility-now-available-for-container-registry</guid>
+
+					<description><![CDATA[<p>Packages&#058; internal visibility now available for Container registry</p>
+<p>The post <a href="https://github.blog/changelog/2021-03-24-packages-internal-visibility-now-available-for-container-registry">Packages&#058; internal visibility now available for Container registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>The GitHub Packages Container registry can now create and use containers set with Internal visibility. Internal visibility allows all members of an organization and all organizations within an enterprise read access to the container to more easily share data with your teammates.</p>
+<p>This feature is generally available today on GitHub Enterprise Cloud. Navigate to your organization&#039;s Packages settings and click the option for Internal visibility to enable.</p>
+<p><img decoding="async" src="https://i0.wp.com/user-images.githubusercontent.com/12765610/112353717-43277680-8c89-11eb-9ab6-e5b678c74dd8.png?ssl=1" alt="image" data-recalc-dims="1"></p>
+<p>Learn more about <a href="https://docs.github.com/en/packages/guides/configuring-access-control-and-visibility-for-container-images#container-creation-visibility-for-organization-members">configuring visibility for container images</a></p>
+<p><a href="https://github.community/c/code-to-cloud/github-packages/43">For questions, visit the GitHub Packages community</a></p>
+<p><a href="https://github.com/github/roadmap/projects/1?card_filter_query=label%3Apackages">To see what&#039;s next for Packages, visit our public roadmap</a></p>
+<p>The post <a href="https://github.blog/changelog/2021-03-24-packages-internal-visibility-now-available-for-container-registry">Packages&#058; internal visibility now available for Container registry</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">56992</post-id>	</item>
+	</channel>
+</rss>
